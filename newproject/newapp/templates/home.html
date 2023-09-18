@@ -1,0 +1,152 @@
+{%extends 'navbar.html' %}
+{% block home%}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'newapp/css/style.css' %}">
+</head>
+
+
+<body class="body">
+
+ <div class="main_container">
+    <h1>This is heading</h1>
+ </div>
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+        {% for banner in banners %}
+          <div class="carousel-item  {% if forloop.first %}active {% endif %}">
+         
+          <img class="d-block w-100" src="{{banner.image.url}}" alt="{{banner.title}}">
+              </div>
+        {% endfor %}  
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+
+
+   
+    
+    
+
+  <div class="container-liquid bg-primary">
+     <header class="text-left text-md-center  font-weight-bolder text-uppercase text-ligth bg-primary py-3">
+          <h1>Study With Mahbubb</h1>
+     </header>
+  </div>
+    <h1 class="c">Hellow world</h1>
+
+   <div class="row">
+      <div class="col-lg-3 col-md-6">
+          <h1>Web Design1</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt expedita quaerat earum aperiam doloremque eum modi labore molestias. Maxime recusandae, rem beatae soluta placeat qui odit non cum unde? Expedita.</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h1>Web Design1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt expedita quaerat earum aperiam doloremque eum modi labore molestias. Maxime recusandae, rem beatae soluta placeat qui odit non cum unde? Expedita.</p>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+      <h1>Web Design1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt expedita quaerat earum aperiam doloremque eum modi labore molestias. Maxime recusandae, rem beatae soluta placeat qui odit non cum unde? Expedita.</p>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <h1>Web Design1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt expedita quaerat earum aperiam doloremque eum modi labore molestias. Maxime recusandae, rem beatae soluta placeat qui odit non cum unde? Expedita.</p>
+</div>
+
+   </div>
+ 
+
+    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vitae ad perspiciatis eligendi cum doloribus unde exercitationem quia rerum, vel facere. Quae, quidem rerum. Voluptate culpa inventore facilis provident voluptatem.</p>
+   
+    <div class="row">
+        {% for card in cards%}
+    <div class="col-md-6 col-lg-4">
+        <img src="{{card.image.url}}" class="card-image-top  " alt="{{card.tile}}">
+        <div class="card-body">
+            <h5 class="card-title ">{{card.title}}</h5>
+            <p class="card-text">{{card.description}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+
+    <ul>
+        <li>Marker</li>
+        <li>pen</li>
+        <li>Double</li>
+    </ul>
+
+
+    <ol class="ol1">
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem earum eaque saepe numquam beatae vel odio, explicabo magnam tempore deserunt reiciendis quas corrupti voluptatibus similique, ad cumque quasi impedit unde?</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores architecto dolorem sint esse dolore libero quis illum consequuntur maiores! Autem enim vitae tempore incidunt maxime ducimus quis corporis odit quo.</li>
+        <li>abc</li>
+    </ol>
+    <div class="class_form">
+    <form action="" method="POST">
+        <label for="uname">Username</label>
+        <input type="text" id="uname" class="uname" value="Mahbub"><br>
+        <label for="password">Password</label>
+        <input type="text" id="passowrd" class="password" placeholder="abc"><br><br>
+        <label for="email"> Email </label>
+        <input type="text" id="email" class="email" placeholder="abc@gmail.com">
+        <input type="submit" value="Submit">
+    </form>
+    </div> 
+
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="remember-forget">
+                <label >  <input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account?<a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+    
+ 
+ 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{% static '/js/scripts.js' %}"></script>
+</body>
+
+</html>
+
+{% endblock   %}
